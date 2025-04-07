@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <title>Document</title>
 </head>
 <body id="body-cv">
+    <button class="bouton-retour"><a href="index.html">Retour</a></button>
     <main id="main-cv">
         <div class="gauche">
             <div class="head-gauche">
@@ -39,48 +42,48 @@
                         <p>Bamako</p>
                     </div>
                 </div>
-                <div class="foot-gauche">
-                    <div class="titre">
-                        <div class="icon-titre">
-                            <div class="icon">
-                                <img src="images/diplome-icon.png" alt="">
-                            </div>
-                            <h1>DIPLOMES</h1>
+            </div>
+            <div class="foot-gauche">
+                <div class="titre">
+                    <div class="icon-titre">
+                        <div class="icon">
+                            <img src="images/diplome-icon.png" alt="">
                         </div>
+                        <h1>DIPLOMES</h1>
                     </div>
-                    <div class="parcour">
-                        <h2>TECHNOLAB ISTA/Bamako</h2>
-                        <p>Licence en génie logiciel <br>
-                            2022-2023
-                        </p>
-                    </div>
-                    <div class="parcour">
-                        <h2>TECHNOLAB ISTA/Bamako</h2>
-                        <p>Licence en génie logiciel <br>
-                            2021-2022
-                        </p>
-                    </div>
-                    <div class="parcour">
-                        <h2>TECHNOLAB ISTA/Bamako</h2>
-                        <p>Licence en génie logiciel <br>
-                            2019-2020
-                        </p>
-                    </div>
-                    <div class="titre">
-                        <div class="icon-titre">
-                            <div class="icon">
-                                <img src="images/icon-reference.png" alt="">
-                            </div>
-                            <h1>REFERENCES</h1>
+                </div>
+                <div class="parcour">
+                    <h2>TECHNOLAB ISTA/Bamako</h2>
+                    <p>Licence en génie logiciel <br>
+                        2022-2023
+                    </p>
+                </div>
+                <div class="parcour">
+                    <h2>TECHNOLAB ISTA/Bamako</h2>
+                    <p>Licence en génie logiciel <br>
+                        2021-2022
+                    </p>
+                </div>
+                <div class="parcour">
+                    <h2>TECHNOLAB ISTA/Bamako</h2>
+                    <p>Licence en génie logiciel <br>
+                        2019-2020
+                    </p>
+                </div>
+                <div class="titre">
+                    <div class="icon-titre">
+                        <div class="icon">
+                            <img src="images/icon-reference.png" alt="">
                         </div>
+                        <h1>REFERENCES</h1>
                     </div>
-                    <div class="parcour">
-                        <h2>Mr Konate</h2>
-                        <p>ingéniere logiciel <br>
-                            Tel: +22378654326 <br>
-                            Email: mk@gmail.com <br>
-                        </p>
-                    </div>
+                </div>
+                <div class="parcour">
+                    <h2>Mr Konate</h2>
+                    <p>ingéniere logiciel <br>
+                        Tel: +22378654326 <br>
+                        Email: mk@gmail.com <br>
+                    </p>
                 </div>
             </div>
         </div>
@@ -185,7 +188,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </main>
+    <div class="controls">
+        <button onclick="telechargerPDF()">📄 Télécharger en PDF</button>
+    </div>
+    <div class="couleur">
+        <div class="boite-couleur">
+            <label for="colorPicker">Choisir une couleur</label>
+            <input type="color" id="colorPicker" value="#2c3e50" onchange="changerCouleur(this.value)">
+        </div>
+        <button onclick="changerCouleur('#333333')">Par defaut</button>
+    </div>
 </body>
 </html>

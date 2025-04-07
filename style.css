@@ -1,11 +1,16 @@
+:root{
+    --bg-color:#333333;
+}
 body{
-    width: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 #body-cv{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 /*Accueil*/
 #main-accueil{
@@ -38,15 +43,17 @@ body{
 
 #main-cv{
     display: flex;
-    width: 30%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: 595px;
+    height: 842px;
+    margin: 0;
 }
 .gauche{
     width: 40%;
+    height: 100%;
     background-color: #D9D9D9; 
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    align-items: center; 
 }
 .body-gauche{
     display: flex;
@@ -54,12 +61,11 @@ body{
     align-items: center;
 }
 .head-gauche{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #333333;
+    background-color: var(--bg-color);
     color: white;
     border-radius: 0 0 50vh 50Vh;
     text-align: center;  
@@ -67,15 +73,15 @@ body{
 .head-gauche h1{
     padding-top: 10%;
     margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 16px;
 }
 .head-gauche h2{
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: normal;
 }
 
 .adresse{
-    font-size: 0.6rem;
+    font-size: 8px;
     display: flex;
     align-items: center;
 }
@@ -86,16 +92,17 @@ body{
 
 .foot-gauche{
     width: 96%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #333333;
+    background-color: var(--bg-color);
     color: white;
     border-radius: 48vh 48vh 0 0;
     text-align: center;
 }
 .foot-gauche .titre{
-    padding-top: 25%;
+    padding-top: 5%;
 }
 .foot-gauche .icon{
     width: 20px;
@@ -107,27 +114,29 @@ body{
     align-items: center;   
 }
 .parcour h2{
-    font-size: 12px;
+    font-size: 14px;
 }
 .parcour p{
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .droite{
     display: flex;
     flex-direction: column;
     width: 60%;
-    padding-left: 10%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .droite h2{
-    font-size: 12px;
+    font-size: 14px;
 }
 .droite p{
     text-align: justify;
-    font-size: 8px;
+    font-size: 12px;
 }
 .droite .titre{
-    margin-top: 15%;
+    margin-top: 5%;
 }
 .titre{
     display: flex;
@@ -140,13 +149,14 @@ body{
     align-items: center;
 }
 .icon-titre h1{
-    font-size: 0.8rem;
+    font-size: 16px;
+    padding-left: 2%;
 }
 .icon{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: black;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +172,7 @@ body{
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 5%;
+    margin-bottom: 3.5%;
 }
 .photo-profil img{
     width: 100%;
@@ -184,7 +194,7 @@ body{
 .bare-competence .bare1, .bare2{
     width: 30px;
     height: 5px;
-    background-color: black;
+    background-color: var(--bg-color);
 }
 .bare1{
     border-radius: 30% 0 0 30%;
@@ -198,4 +208,62 @@ body{
 .langue-hobbie{
     display: flex;
     justify-content: space-between;
+}
+
+.titre ul{
+    padding-left: 20%;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+  }
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .couleur{
+    display: flex;
+  }
+.boite-couleur{
+    display: flex;
+    align-items: center;
+}
+.bouton-retour{
+    position: relative;
+    top: 2%;
+    left: 40%;
+    margin-bottom: 5%;
+}
+.controls{
+    margin-top: 10%;
+}
+@media(max-width : 700px) {
+    #main-cv{
+        width: 400px;
+        margin: 0;
+    }
+    .foot-gauche .titre{
+        padding-top: 40%;
+    }
+}
+@media(max-width : 430px) {
+    #main-cv{
+        width: 300px;
+        margin: 0;
+    }
+    .foot-gauche .titre{
+        padding-top: 40%;
+    }
+}
+@media(max-width : 375px) {
+    #main-cv{
+        width: 200px;
+        margin: 0;
+    }
+    .foot-gauche .titre{
+        padding-top: 40%;
+    }
 }
