@@ -3,7 +3,10 @@ body{
     margin: 0;
     padding: 0;
 }
-
+#body-cv{
+    display: flex;
+    justify-content: center;
+}
 /*Accueil*/
 #main-accueil{
     display: flex;
@@ -35,7 +38,6 @@ body{
 
 #main-cv{
     display: flex;
-    justify-content: center;
     width: 30%;
     margin-left: 2%;
     margin-right: 2%;
@@ -52,35 +54,85 @@ body{
     align-items: center;
 }
 .head-gauche{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #333333;
     color: white;
-    border-radius: 0 0 100px 100px;
-    text-align: center;
-   
+    border-radius: 0 0 50vh 50Vh;
+    text-align: center;  
 }
 .head-gauche h1{
     padding-top: 10%;
     margin-bottom: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .head-gauche h2{
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: normal;
 }
 
+.adresse{
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+}
+.adresse img{
+    width: 12px;
+    height: 12px;
+}
+
+.foot-gauche{
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    color: white;
+    border-radius: 48vh 48vh 0 0;
+    text-align: center;
+}
+.foot-gauche .titre{
+    padding-top: 25%;
+}
+.foot-gauche .icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.parcour h2{
+    font-size: 12px;
+}
+.parcour p{
+    font-size: 8px;
+}
 
 .droite{
     display: flex;
     flex-direction: column;
     width: 60%;
+    padding-left: 10%;
+}
+.droite h2{
+    font-size: 12px;
+}
+.droite p{
+    text-align: justify;
+    font-size: 8px;
+}
+.droite .titre{
+    margin-top: 15%;
 }
 .titre{
     display: flex;
     flex-direction: column;
-    width: 60%;
+
 }
 .icon-titre{
     display: flex;
@@ -88,7 +140,7 @@ body{
     align-items: center;
 }
 .icon-titre h1{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .icon{
     width: 20px;
@@ -105,11 +157,45 @@ body{
 }
 
 .photo-profil{
-    width: 130px;
-    height: 130px;
-    background-image: url('images/i-know-exactly-what-i-want-headshot-attractive-young-african-american-student-stylish-glasses-having-serious-calm-face-expression-feeling-confident-about-his-future-plans-career.jpg');
+    background-color: white;
+    width: 90%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
     margin-bottom: 5%;
+}
+.photo-profil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.element-competence{
+    display: flex;
+    justify-content: space-between;
+}
+.competence{
+    display: flex;
+}
+.bare-competence{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+.bare-competence .bare1, .bare2{
+    width: 30px;
+    height: 5px;
+    background-color: black;
+}
+.bare1{
+    border-radius: 30% 0 0 30%;
+}
+.bare2{
+    background-color: #D9D9D9;
+    width: 10px;
+    border-radius: 0 50% 50% 0;
+}
+
+.langue-hobbie{
+    display: flex;
+    justify-content: space-between;
 }
