@@ -11,6 +11,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: gray;
 }
 /*Accueil*/
 #main-accueil{
@@ -45,11 +46,13 @@ body{
     display: flex;
     width: 595px;
     height: 842px;
-    margin: 0;
+    margin: 0 auto;
+    background-color: white;
 }
 .gauche{
     width: 40%;
     height: 100%;
+    margin-left: 5%;
     background-color: #D9D9D9; 
     display: flex;
     flex-direction: column;
@@ -240,6 +243,8 @@ input[type="color"] {
 .controls{
     margin-top: 10%;
 }
+
+/*responsive page cv*/
 @media(max-width : 700px) {
     #main-cv{
         width: 400px;
@@ -248,8 +253,97 @@ input[type="color"] {
     .foot-gauche .titre{
         padding-top: 40%;
     }
+    .controls{
+        margin-top: 20%;
+    }
 }
 @media(max-width : 430px) {
+    #main-cv{
+        width: 400px;
+        margin: 0;
+    }
+    .gauche{
+        height: 100%;
+    }
+    .foot-gauche .titre{
+        padding-top: 45%;
+    }
+    .controls{
+        margin-top: 5%;
+        width: 50%;
+    }
+    .foot-gauche .icon{
+        width: 12px;
+        height: 12px;
+    }
+    .icon-titre h1{
+        font-size: 12px;
+    }
+    .icon{
+        width: 12px;
+        height: 12px;
+    }
+    .droite{
+        padding-top: 0%;
+    }
+    .droite .titre{
+        margin-top: 15%;
+    }
+    .droite p{
+        font-size: 9px;
+    }
+    .droite h2 {
+        font-size: 11px;
+    }
+    .titre ul {
+        font-size: 10px;
+    }
+    .parcour h2 {
+        font-size: 10px;
+    }
+    .head-gauche h1 {
+        font-size: 12px;
+    }
+    .head-gauche h2 {
+        font-size: 10px;
+    }
+    .adresse img {
+        width: 10px;
+        height: 10px;
+    }
+    .langue-hobbie{
+        padding-top: 30px;
+    }
+}
+@media(min-width : 431px){
+    .icon-titre h1 {
+        font-size: 14px;
+    }
+    .icon {
+        width: 14px;
+        height: 14px;
+    }
+    .droite p {
+        font-size: 10px;
+    }
+    .foot-gauche .icon {
+        width: 14px;
+        height: 14px;
+    }
+    .parcour h2 {
+        font-size: 12px;
+    }
+    .parcour p {
+        font-size: 9px;
+    }
+    .titre ul li{
+        font-size: 12px;
+    }
+}
+@media(max-width : 374px) {
+    .head-gauche h1 {
+        font-size: 12px;
+    }
     #main-cv{
         width: 300px;
         margin: 0;
@@ -258,12 +352,102 @@ input[type="color"] {
         padding-top: 40%;
     }
 }
-@media(max-width : 375px) {
+@media(max-width : 410px){
+    #main-cv{
+        width: 350px;
+        margin: 0;
+    }
+    .droite .titre {
+        margin-top: 15%;
+    }
+    .icon {
+        width: 10px;
+        height: 10px;
+    }
+    .icon-titre h1 {
+        font-size: 10px;
+    }
+    .foot-gauche .icon {
+        width: 10px;
+        height: 10px;
+    }
+    .parcour p {
+        font-size: 10px;
+    }
+}
+@media(max-width : 370px){
+    #main-cv{
+        width: 300px;
+        margin: 0;
+    }
+}
+@media(max-width : 330px){
+    #main-cv{
+        width: 250px;
+        margin: 0;
+    }
+    .adresse {
+        font-size: 5px;
+    }
+    
+    .adresse img {
+        width: 5px;
+        height: 5px;
+    }
+}
+@media(max-width : 280px){
     #main-cv{
         width: 200px;
         margin: 0;
     }
-    .foot-gauche .titre{
-        padding-top: 40%;
+    .icon-titre h1 {
+        font-size: 6px;
+    }
+    .parcour h2 {
+        font-size: 6px;
+    }
+    .parcour p {
+        font-size: 6px;
+    }
+    .droite h2 {
+        font-size: 9px;
+    }
+    .bare-competence {
+        width: 40%;
+    }
+}
+@media(max-width : 220px){
+    #main-cv{
+        width: 150px;
+        margin: 0;
+    }
+    .icon-titre h1 {
+        font-size: 5px;
+    }
+    .icon {
+        width: 5px;
+        height: 5px;
+    }
+    .droite p {
+        font-size: 4px;
+        width: 80%;
+    }
+    .competence {
+        display: flex;
+        width: 40%;
+    }
+    .droite h2 {
+        font-size: 5px;
+        width: 83%;
+    }
+    .titre ul li{
+        font-size: 5px;
+    }
+    .langue-hobbie{
+        width: 80%;
+    }
+    
+    .controls button{
+        font-size: 5px;
     }
 }
