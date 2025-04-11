@@ -2,6 +2,8 @@
     --bg-color:#333333;
 }
 body{
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -234,20 +236,43 @@ input[type="color"] {
     display: flex;
     align-items: center;
 }
-.bouton-retour{
+.bouton-retour {
     position: relative;
-    top: 2%;
-    left: 40%;
-    margin-bottom: 5%;
+    left: 30%;
+    margin-top: 1%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b36555; 
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.bouton-retour:hover {
+    background-color: #cb0b0b; 
+}  
 .controls{
-    margin-top: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
-
+.controls button{
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.couleur{
+    margin-top: 1%;
+}
+.couleur button{
+    margin-left: 1%;
+}
 /*responsive page cv*/
 @media(max-width : 700px) {
     #main-cv{
-        width: 400px;
+        width: 100%;
         margin: 0;
     }
     .foot-gauche .titre{
@@ -259,7 +284,8 @@ input[type="color"] {
 }
 @media(max-width : 430px) {
     #main-cv{
-        width: 400px;
+        width: 100%;
+        height: 111vh;
         margin: 0;
     }
     .gauche{
@@ -354,7 +380,7 @@ input[type="color"] {
 }
 @media(max-width : 410px){
     #main-cv{
-        width: 350px;
+        width: 100%;
         margin: 0;
     }
     .droite .titre {
@@ -377,7 +403,7 @@ input[type="color"] {
 }
 @media(max-width : 370px){
     #main-cv{
-        width: 300px;
+        width: 100%;
         margin: 0;
     }
 }
